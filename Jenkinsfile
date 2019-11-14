@@ -6,16 +6,5 @@ pipeline {
         sh 'pip install -r requirements.txt'
       }
     }
-    stage('Test') {
-            agent {
-                docker {
-                    image 'ython:2.7.17'
-                }
-            }
-            steps {
-                sh 'python test_basic.py'
-            }
-
-        }
-    }
+  }
 }
