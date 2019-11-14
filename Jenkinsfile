@@ -9,17 +9,13 @@ pipeline {
     stage('Test') {
             agent {
                 docker {
-                    image 'qnib/pytest'
+                    image 'ython:2.7.17'
                 }
             }
             steps {
-                sh 'test_basic.py --verbose --junit-xml test-reports/results.xml sources/test_basic.py'
+                sh 'python test_basic.py'
             }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
+
         }
     }
 }
