@@ -18,9 +18,9 @@ class BasicTests(unittest.TestCase):
         pass
 
 
-###############
-#### tests ####
-###############
+        ###############
+        #### tests ####
+        ###############
 
     def test_main_page(self):
         response = self.app.get('/')
