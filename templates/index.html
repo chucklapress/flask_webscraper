@@ -21,10 +21,12 @@ body {
           <br>
            <br>
              <div class="container">
-             <h2>Todays beautiful soup findings</h2>
+             <h2>Luna Rosa Gelato flavors for today  {{ date }}</h2>
               <br>
-              <h3>From {{big_news}}</h3>
-              <h3>{{ highlight }}</h3>
-         </div>
+              {% for r in rows %}
+              <h3>{{r.get_text()}}</h3>
+              {% endfor %}
+              </div>
+            <br>
      </body>
 </html>
