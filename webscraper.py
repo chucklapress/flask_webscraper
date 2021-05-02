@@ -5,7 +5,6 @@ import datetime
 
 
 
-
 source = requests.get('http://lunarosa.herokuapp.com')
 soup = BeautifulSoup(source.text, 'html.parser')
 rows = soup.find_all('h2')
