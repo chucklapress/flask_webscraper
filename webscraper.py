@@ -8,8 +8,9 @@ import datetime
 source = requests.get('http://lunarosa.herokuapp.com')
 soup = BeautifulSoup(source.text, 'html.parser')
 rows = soup.find_all('h2')
-for row in rows:
-    print(row.get_text())
+# removed print statement in terminal as not needed
+#for row in rows:
+#    print(row.get_text())
 
 app = Flask(__name__)
 @app.route('/')
